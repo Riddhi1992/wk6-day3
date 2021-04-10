@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= `${title}`
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='StyleSheet' href='css/styles.css' type='text/css')
+    //- script(src='script.js')
+
+header
+  nav
+    ul
+      li 
+        a(href='/index') Home
+      li |
+      li
+        a(href='#') Blog
+    ul.test 
+      li 
+        a(href='/form') Register
+
+if !admin
+    main
+        section#intro-text
+            span Simple Kitchen
+            h3
+                | Simple &amp; Comforting
+                br
+                |             Recipes All Year Round
+            p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
+
+            if !!isHomePage
+                button.submit-buttton View Recipes
+
+        section#intro-image
+            block content
+else
+    main.admin-container
+        block content
+
+include footer

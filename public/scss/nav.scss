@@ -1,0 +1,29 @@
+@import "colors.scss";
+
+/* SCSS */
+
+nav {
+    
+    width: 100%;
+    display: inline;
+    font: {
+        size: 1em;
+        font-weight: bold;
+    }
+    float: left;
+    ul {
+        list-style-type: none;
+        li {
+            float: left;
+            margin: 0 5px 0 0;
+            color: $color4;
+            a {
+                color: $color4;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
